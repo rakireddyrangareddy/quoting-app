@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quote App</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <title>Request Quote</title>
+</head>
+<body>
+    <h2>Injection Molding Quote Form</h2>
+
+    <form method="POST" action="/quote">
+        <label>Material:</label><br>
+        <input type="text" name="material" required><br><br>
+
+        <label>Part Size (in cm³):</label><br>
+        <input type="number" name="part_size" step="0.01" required><br><br>
+
+        <label>Quantity:</label><br>
+        <input type="number" name="quantity" required><br><br>
+
+        <label>Cycle Time (in seconds):</label><br>
+        <input type="number" name="cycle_time" step="0.01" required><br><br>
+
+        <label>Delivery ZIP:</label><br>
+        <input type="text" name="delivery_zip" required><br><br>
+
+        <input type="submit" value="Get Quote">
+    </form>
+
+    <br><a href="/logout">Logout</a>
+</body>
+</html>
+<br><a href="/history">View My Quotes</a>

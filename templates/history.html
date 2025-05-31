@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quote App</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h2>Quote History for {{ session['username'] }}</h2>
+    <a href="/quote">Request New Quote</a> | <a href="/logout">Logout</a>
+    <br><br>
+
+    {% if quotes %}
+        <table border="1" cellpadding="5">
+            <tr>
+                <th>Material</th>
+                <th>Part Size (cm³)</th>
+                <th>Quantity</th>
+                <th>Cycle Time (s)</th>
+                <th>ZIP</th>
+                <th>Quote ($)</th>
+                <th>Date/Time</th>
+            </tr>
+            {% for q in quotes %}
+            <tr>
+                <td>{{ q[0] }}</td>
+                <td>{{ q[1] }}</td>
+                <td>{{ q[2] }}</td>
+                <td>{{ q[3] }}</td>
+                <td>{{ q[4] }}</td>
+                <td>{{ "%.2f"|format(q[5]) }}</td>
+                <td>{{ q[6] }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    {% else %}
+        <p>No quotes found yet.</p>
+    {% endif %}
+</body>
+</html>

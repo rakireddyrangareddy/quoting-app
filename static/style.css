@@ -1,0 +1,51 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    color: #000;
+    margin: 40px;
+}
+
+h2 {
+    color: maroon;
+}
+
+form, table {
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="password"],
+input[type="submit"] {
+    width: 300px;
+    padding: 8px;
+    margin: 8px 0;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    background-color: maroon;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: gold;
+    color: black;
+}
+
+a {
+    color: maroon;
+    font-weight: bold;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+a:hover {
+    color: gold;
+}
